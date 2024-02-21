@@ -1,0 +1,59 @@
+.homeContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-around; /* Adjusted justify-content to evenly distribute containers */
+  align-items: flex-end;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('homeimage.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  position: relative;
+  width: 40%; /* Adjusted width for larger containers */
+  max-width: 400px; /* Adjusted max-width */
+  height: 250px;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.container:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.largeContainer {
+  width: 45%; /* Increased width for larger containers */
+}
+
+.movieBackground, .tvBackground {
+  background-size: cover;
+}
+
+.titleOverlay {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1; /* Make the text always visible */
+}
+
+.container:hover .titleOverlay {
+  /* Remove opacity transition */
+}
